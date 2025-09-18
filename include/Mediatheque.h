@@ -1,0 +1,10 @@
+#ifndef PROJETPOO_MEDIATHEQUE_H
+#define PROJETPOO_MEDIATHEQUE_H
+
+
+class Mediatheque {
+
+};
+
+
+#endif //PROJETPOO_MEDIATHEQUE_H
