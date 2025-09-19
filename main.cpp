@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "include/ajout.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main() {
 
     do {
         cout << "\n===== MENU PRINCIPAL =====\n";
-        cout << "1. ADD type\n";
+        cout << "1. Ajouter une ressource\n";
         cout << "2. Load filename\n";
         cout << "3. Save filename\n";
         cout << "4. SEARCH chaine\n";
@@ -42,7 +43,7 @@ int main() {
 
         switch (choix) {
             case 1:
-                cout << "ADD type permet de lancer une procédure permettant de creer une nouvelle ressource en fonction du type specifie en parametre.\n";
+                ajouterRessource("mediatheque.txt");
                 break;
             case 2:
                 cout << "Cette commande doit permettre à l'utilisateur de charger un fichier contenant les ressources disponibles dans la médiathèque\n";
