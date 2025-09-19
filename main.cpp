@@ -1,8 +1,28 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
 int main() {
+    // Création du fichier mediatheque.txt s'il n'existe pas
+    string fichier = "mediatheque.txt";
+    ifstream test(fichier);
+
+    if (!test) {
+        ofstream createFile(fichier);
+        if (createFile) {
+            createFile << "# Fichier mediatheque" << endl;
+            cout << "Fichier " << fichier << " créé avec succès." << endl;
+        } else {
+            cerr << "Erreur lors de la création du fichier " << fichier << endl;
+            return 1;
+        }
+        createFile.flush();
+    } else {
+        cout << "Fichier " << fichier << " déjà existant." << endl;
+    }
+
     int choix;
 
     do {
@@ -12,11 +32,11 @@ int main() {
         cout << "3. Save filename\n";
         cout << "4. SEARCH chaine\n";
         cout << "5. CLEAR\n";
-        cout <<"6. LIST\n";
-        cout <<"7. SHOW id\n";
-        cout <<"8. DELETE id\n";
-        cout <<"9. RESET\n";
-        cout <<"10. Quitter\n";
+        cout << "6. LIST\n";
+        cout << "7. SHOW id\n";
+        cout << "8. DELETE id\n";
+        cout << "9. RESET\n";
+        cout << "10. Quitter\n";
         cout << "Votre choix : ";
         cin >> choix;
 
@@ -60,4 +80,3 @@ int main() {
 
     return 0;
 }
-    
