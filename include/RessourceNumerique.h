@@ -11,7 +11,7 @@ private:
 
 public:
     RessourceNumerique(int id, const std::string& titre, const std::string& auteur,
-                       const std::string& type, double taille, const std::string& url);
+                       const std::string& type, double taille, const std::string& url, bool dispo);
 
     void afficher() const override;
 };

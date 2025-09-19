@@ -11,7 +11,7 @@ private:
 
 public:
     CD(int id, const std::string& titre, const std::string& auteur,
-       const std::string& maisonProd, int nbPistes, double duree);
+       const std::string& maisonProd, int nbPistes, double duree,bool dispo);
 
     void afficher() const override;
 };
