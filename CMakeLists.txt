@@ -13,6 +13,7 @@ add_executable(ProjetPOO main.cpp
         include/Livre.h
         include/Dvd.h
         include/Cd.h
+        include/Utilisateur.h
         src/Cd.cpp
         src/Dvd.cpp
         src/Livre.cpp
@@ -21,4 +22,5 @@ add_executable(ProjetPOO main.cpp
         src/RessourceNumerique.cpp
         src/Revue.cpp
         src/Vhs.cpp
+        src/Utilisateur.cpp
 )
