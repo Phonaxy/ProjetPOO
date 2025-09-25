@@ -10,11 +10,11 @@ private:
     int annee;
 
 public:
-    Livre(int id, const std::string& titre, const std::string& auteur,
+    Livre(int id, const std::string& titre, const std::string& auteur, bool dispo,
           int nbPages, const std::string& collection, const std::string& resume, int annee);
 
     void afficher() const override;
+    std::string toFileString() const override;
 };
 
 #endif
-
