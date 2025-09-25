@@ -21,4 +21,4 @@ add_executable(ProjetPOO main.cpp
         src/RessourceNumerique.cpp
         src/Revue.cpp
         src/Vhs.cpp
-        src/ajout.cpp)
+)
