@@ -11,10 +11,11 @@ private:
     int nbChapitres;
 
 public:
-    DVD(int id, const std::string& titre, const std::string& auteur,
-        const std::string& maisonProd, const std::string& duree, int nbChapitres, bool dispo);
+    DVD(int id, const std::string& titre, const std::string& auteur, bool dispo,
+        const std::string& maisonProd, const std::string& duree, int nbChapitres);
 
     void afficher() const override;
+    std::string toFileString() const override;
 };
 
 #endif
