@@ -1,0 +1,10 @@
+1;Livre;Roman;Camus;1;185;L'Étranger;Meursault et l’absurde;1942
+2;CD;Rock;Pink Floyd;1;Musique;43;The Dark Side of the Moon;Album culte;1973
+3;Livre;Essai;Nietzsche;1;320;Ainsi parlait Zarathoustra;Philosophie et poésie;1883
+4;CD;Pop;Michael Jackson;1;Musique;42;Thriller;L’album le plus vendu;1982
+5;Livre;Roman;George Orwell;1;328;1984;Dystopie totalitaire;1949
+6;CD;Jazz;John Coltrane;1;Musique;37;A Love Supreme;Impro jazz;1965
+7;Livre;BD;Goscinny;1;48;Astérix le Gaulois;Première aventure;1961
+8;CD;Classique;Beethoven;1;Musique;67;Symphonie n°9;Œuvre magistrale;1824
+9;Livre;Poésie;Rimbaud;1;210;Une saison en enfer;Recueil visionnaire;1873
+10;CD;Électro;Daft Punk;1;Musique;74;Discovery;Album culte;2001
