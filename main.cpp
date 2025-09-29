@@ -321,7 +321,6 @@ int main() {
     cout << "Entrez le mot de passe administrateur (ou ENTER pour acces client) : ";
 
     string motDePasse;
-    cin.ignore();
     getline(cin, motDePasse);
 
     // Créer un utilisateur selon l'authentification
