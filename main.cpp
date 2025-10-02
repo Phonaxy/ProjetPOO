@@ -53,7 +53,7 @@ void afficherFichiersDonnees() {
 }
 
 string choisirFichierDonnees() {
-    string dataPath = "C:\\Users\\Phona\\CLionProjects\\ProjetPOO\\data";
+    string dataPath = "../data";
     vector<string> fichiers;
 
     try {
