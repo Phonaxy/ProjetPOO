@@ -11,7 +11,7 @@ using namespace std;
 namespace fs = std::filesystem;
 
 void afficherFichiersDonnees() {
-    string dataPath = "C:\\Users\\Phona\\CLionProjects\\ProjetPOO\\data";
+    string dataPath = "../data";
     cout << "\n=== FICHIERS DE DONNEES DISPONIBLES ===\n";
     cout << "Repertoire : " << dataPath << "\n\n";
 
@@ -183,45 +183,26 @@ void gererSessionAdmin(Mediatheque& mediatheque, const string& fichier) {
                 mediatheque.ajouterRessource();
                 break;
 
-            case 2: { // Load avec choix de fichier
+            case 2: {
                 cout << "=== CHARGEMENT DE DONNEES ===\n";
-                cout << "1. Charger depuis le dossier data (ressources pre-remplies)\n";
-                cout << "2. Charger un fichier local\n";
-                cout << "Votre choix : ";
 
-                int choixLoad;
-                if (cin >> choixLoad) {
-                    if (choixLoad == 1) {
-                        // Charger depuis le dossier data
-                        string fichierChoisi = choisirFichierDonnees();
-                        if (!fichierChoisi.empty()) {
-                            cout << "Chargement du fichier de donnees : " << fs::path(fichierChoisi).filename().string() << "\n";
-                            mediatheque.load(fichierChoisi);
-                            cout << "Les donnees ont ete chargees dans la mediatheque.\n";
-                            cout << "Voulez-vous sauvegarder ces donnees dans " << fichier << " ? (o/n) : ";
-                            char reponse;
-                            cin >> reponse;
-                            if (reponse == 'o' || reponse == 'O') {
-                                mediatheque.save(fichier);
-                                cout << "Donnees sauvegardees dans " << fichier << "\n";
-                            }
-                        }
-                    } else if (choixLoad == 2) {
-                        // Charger un fichier local
-                        cout << "Nom du fichier a charger : ";
-                        cin.ignore();
-                        string fichierLocal;
-                        getline(cin, fichierLocal);
-                        if (!fichierLocal.empty()) {
-                            mediatheque.load(fichierLocal);
-                        }
-                    } else {
-                        cout << "Choix invalide.\n";
+                // Charger directement depuis le dossier data
+                string fichierChoisi = choisirFichierDonnees();
+                if (!fichierChoisi.empty()) {
+                    cout << "Chargement du fichier de donnees : "
+                         << fs::path(fichierChoisi).filename().string() << "\n";
+                    mediatheque.load(fichierChoisi);
+                    cout << "Les donnees ont ete chargees dans la mediatheque.\n";
+
+                    cout << "Voulez-vous sauvegarder ces donnees dans " << fichier << " ? (o/n) : ";
+                    char reponse;
+                    cin >> reponse;
+                    if (reponse == 'o' || reponse == 'O') {
+                        mediatheque.save(fichier);
+                        cout << "Donnees sauvegardees dans " << fichier << "\n";
                     }
                 } else {
-                    cout << "Choix invalide.\n";
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Aucun fichier charge.\n";
                 }
                 break;
             }
